@@ -21,27 +21,81 @@
 </head>
 <body>
     <header>
-        <H1>João Souza</H1>
-        <nav aria aria-label="Navegação principal">
-            <ul>
-                <li><a href="#hero">Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-    
+        <nav aria-label="Navegação principal">
+            <a href="#hero">Sobre Mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+            <a href="https://github.com/joaomarcelo-souza" target="_blank" rel="noopener">
+                <img src="img/github-mark.png" alt="GitHub" width="24">
+            </a>
+
+            <a href="https://www.linkedin.com/in/joaomarcelo-souza/" target="_blank" rel="noopener">
+                <img src="img/linkedin.png" alt="LinkedIn" width="24">
+            </a>
         </nav>
+
+        <a href="contato.html" class="btn">Envie uma mensagem</a>
     </header>
 
     <main>
+        
         <section id="hero" aria-labelledby="hero-heading">
+            <H1 id="hero-heading">João Souza</H1>
             <img src="./img/perfil.jpg" alt="Foto Profissional de João Souza">
-            <H2 id="hero-heading">Desenvolvedor Full Stack</H2>
+            <H2>Desenvolvedor Full Stack</H2>
             <p>Especialista em criar experiências web reponsivas</p>
+
+            <section id="skills">
+                <h2>Tecnologias</h2>
+                <ul> <!-- Lista NÃO ordenada -->
+                    <li>JavaScript</li>
+                    <li>Angular</li>
+                    <li>TypeScript</li>
+                </ul>
+                
+                <h2>Certificações</h2>
+                <ol> <!-- Lista ordenada -->
+                    <li>Google UX Design</li>
+                    <li>AWS Cloud Practitioner</li>
+                </ol>
+            </section>
         </section>
 
         <section id="projetos">
             <div class="projeto">
+
                 <h3>Adotau: Sistema de Adoção de animais de Rua</h3>
+
+                <div class="table-responsive"> <!-- Container para mobile -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Adotau</th> <!-- Mescla colunas -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tecnologias</td>
+                                <td>Angular, fastAPI</td>
+                            </tr>
+                            <tr>
+                                <td>Duração</td>
+                                <td>2 meses</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <figure> <!-- Agrupa imagem + legenda -->
+                    <img 
+                        src="img/adotau.png" 
+                        alt="Interface do app de adoção"
+                        loading="lazy"
+                        width="1200"
+                    >
+                    <figcaption>
+                        App desenvolvido com Angular
+                    </figcaption>
+                </figure>
                 <p>Tecnologias: AngularJS, fastAPI, PostgreSQL</p>
             </div>
         </section>
@@ -49,6 +103,27 @@
     </main>
     
     <footer>
+        <!-- Container genérico -->
+        <div class="card"> 
+            <h3>Contato Rápido</h3>
+            
+            <!-- Formulário não funcional sem API -->
+            <form action="https://api.seu-portfolio.com/send" method="POST">
+                <label for="email">E-mail:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email"
+                    placeholder="seu@email.com"
+                    required
+                >
+                
+                <label for="msg">Mensagem:</label>
+                <textarea id="msg" name="message" rows="4"></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
 
         <div id="contato">
             <p>marceloamaral201924@gmail.com</p>
