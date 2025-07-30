@@ -1,0 +1,10 @@
+<section class="list">
+  <h2>Projetos</h2>
+  <ul class="list__grid">
+    @for (p of projects(); track p.id) {
+    <app-project-card [project]="p"></app-project-card>
+    } @empty {
+    <p class="list__empty">Nenhum projeto encontrado</p>
+    }
+  </ul>
+</section>

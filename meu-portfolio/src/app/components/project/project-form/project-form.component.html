@@ -1,0 +1,17 @@
+<form #projectForm="ngForm" (ngSubmit)="onSubmit()">
+  <input
+    type="text"
+    name="title"
+    [(ngModel)]="project.title"
+    required
+    placeholder="Título do projeto"
+  />
+
+  <textarea
+    name="description"
+    [(ngModel)]="project.description"
+    placeholder="Descrição"
+  ></textarea>
+
+  <button type="submit" [disabled]="!projectForm.valid">Salvar Projeto</button>
+</form>

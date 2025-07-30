@@ -1,0 +1,14 @@
+<mat-card class="card">
+  <mat-card-title class="card__title">{{ project.title }}</mat-card-title>
+  <mat-card-content class="card__content">
+    <p>{{ project.description }}</p>
+
+    <div class="tag-list">
+      @for (tech of project.technologies; track $index) {
+      <li>
+        <p class="tech-tag">{{ tech }}</p>
+      </li>
+      }
+    </div>
+  </mat-card-content>
+</mat-card>
